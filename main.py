@@ -22,8 +22,10 @@ def add_recipe(name, ingredients):
 
 
 def show_recipes():
-    for r in recipes:
-        print(r['name'] + ': ' + ', '.join(r['ingredients']))
+    for idx, r in enumerate(recipes, 1):
+        print(f"Рецепт #{idx}: {r['name']}")
+        print(f"Ингредиенты: {', '.join(r['ingredients'])}")
+        print()
 
 
 if __name__ == "__main__":
