@@ -21,6 +21,10 @@ def add_recipe(name, ingredients):
     recipes.append({"name": name, "ingredients": ingredients})
 
 
+def delete_recipe(name, ingredients):
+    recipes.remove({"name": name, "ingredients": ingredients})
+
+
 def show_recipes():
     for idx, r in enumerate(recipes, 1):
         print(f"Рецепт #{idx}: {r['name']}")
